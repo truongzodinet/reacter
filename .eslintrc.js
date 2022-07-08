@@ -17,6 +17,9 @@ module.exports = {
         "react/jsx-uses-vars": "error",
         "react/no-set-state": "off",
 
+        "react/react-in-jsx-scope": "off",
+        "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
+
         // warning missing trailing comma
         // "comma-dangle": ["warn", "always"],
         // "semi": ["warn", "always"],

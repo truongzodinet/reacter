@@ -1,12 +1,19 @@
+<div align="center">
+    <h1>Reacter</h1>
+    <p>The special template for React</p>
+</div>
+
 ## Prettier
 
-- ##### Install
+[Link](https://prettier.io/docs/en/configuration.html)
+
+-   ##### Install
 
 ```bash
 npm install --save-dev --save-exact prettier
 ```
 
-- ##### Create file
+-   ##### Create file
 
 ```bash
 # .prettierrc.json
@@ -17,7 +24,7 @@ coverage
 REDME.md
 ```
 
-- ##### Formating
+-   ##### Formating
 
 ```bash
 npx prettier --write .
@@ -25,13 +32,13 @@ npx prettier --write .
 prettier --write app/<your_directory>
 ```
 
-- ##### Check everyone run
+-   ##### Check everyone run
 
 ```bash
 npx prettier --check .
 ```
 
-- ##### Watch for change
+-   ##### Watch for change
 
 ```bash
 #package.json
@@ -44,14 +51,13 @@ npx prettier --check .
 
 ## ESlint
 
-- ##### ESlint + prettier
-  [Link](https://github.com/prettier/eslint-config-prettier#installation)
+-   ##### ESlint + prettier. ([Link](https://github.com/prettier/eslint-config-prettier#installation))
 
 ```bash
 npm install --save-dev eslint-config-prettier
 ```
 
-- ##### Create file
+-   ##### Create file
 
 ```bash
 npm init @eslint/config
@@ -63,10 +69,19 @@ npm init @eslint/config
 npx eslint <yourfile.js>
 ```
 
-- ##### ESlint + React
-  [Link](https://github.com/jsx-eslint/eslint-plugin-react)
+- ##### Auto fix on save
+```bash
+# settings.json
+"editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+  },
+  "eslint.validate": ["javascript"]
+```
+
+-   ##### ESlint + React. ([Link](https://github.com/jsx-eslint/eslint-plugin-react))
 
 ## Editorconfig
+
 ```bash
 # .editorconfig
 [*]
@@ -90,3 +105,7 @@ npx husky add .husky/pre-commit "npx lint-staged"
     "**/*": "prettier --write --ignore-unknown"
   }
 ```
+
+## Store with Zustand
+[Link](https://github.com/pmndrs/zustand)
+
