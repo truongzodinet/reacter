@@ -3,6 +3,10 @@
     <p>The special template for React</p>
 </div>
 
+## Feature
+* [UnoCSS](https://github.com/unocss/unocss)
+* [React Router](https://reactrouter.com/docs/en/v6/getting-started/installation)
+
 ## Prettier
 
 [Link](https://prettier.io/docs/en/configuration.html)
@@ -102,8 +106,16 @@ npm set-script prepare "husky install"
 npx husky add .husky/pre-commit "npx lint-staged"
 # package.json
 "lint-staged": {
-    "**/*": "prettier --write --ignore-unknown"
-  }
+        "**/*": "prettier --write --ignore-unknown"
+    },
+"husky": {
+    "hooks": {
+        "applypatch-msg": "echo \"[Husky] applypatch-msg\"",
+        "pre-applypatch": "echo \"[Husky] pre-applypatch\"",
+        "post-applypatch": "echo \"[Husky] post-applypatch\"",
+        "pre-commit": "prettier --write . && git add -A ."
+    }
+}
 ```
 
 ## Store with Zustand

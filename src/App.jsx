@@ -1,4 +1,7 @@
 import Counter from "~/components/Counter"
+import { Routes, Route } from "react-router-dom";
+import Home from "~/pages/Home"
+import About from "~/pages/About"
 
 // import logo from "/logo.svg"
 
@@ -12,6 +15,10 @@ function App() {
             </header>
             <main>
                 <Counter />
+                <Routes>
+                    <Route path="/" element={<Home />} />
+                    <Route path="about" element={<About />} />
+                </Routes>
             </main>
         </div>
     )
