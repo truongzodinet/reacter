@@ -1,20 +1,50 @@
-import Counter from "~/components/Counter"
-import { Routes, Route } from "react-router-dom";
+import { useState } from "react"
+import { Routes, Route, Link, useNavigate } from "react-router-dom"
+import logo from "/logo.svg"
 import Home from "~/pages/Home"
 import About from "~/pages/About"
 
-// import logo from "/logo.svg"
-
 function App() {
+    let navigate = useNavigate()
+
+    const [name, setName] = useState("")
+
+    const handleSubmit = (e) => {
+        e.preventDefault()
+        if (name) {
+            navigate(`../${name}`, { replace: true })
+        }
+    }
+
     return (
         <div className="App">
-            <header>
-                {/* <img src={logo} className="App-logo" alt="logo" /> */}
+            <header className="flex flex-col justify-center">
+                <img src={logo} className="max-w-20 max-h-20" alt="logo" />
                 <h1>Reacter</h1>
-                <p>The special template for React</p>
+                <q className="italic text-gray-500">
+                    The special template for React
+                </q>
             </header>
+            <form>
+                <input
+                    type="text"
+                    placeholder="What's your name?"
+                    className="py-1 px-4"
+                    onChange={(e) => setName(e.target.value)}
+                />
+                <button
+                    onClick={handleSubmit}
+                    className="bg-teal-700 hover:bg-teal-800 text-gray-200 py-1 px-4"
+                >
+                    GO
+                </button>
+                <p>{name}</p>
+            </form>
+            <nav>
+                <Link to="/">Home</Link>
+                <Link to="/about">About</Link>
+            </nav>
             <main>
-                <Counter />
                 <Routes>
                     <Route path="/" element={<Home />} />
                     <Route path="about" element={<About />} />

@@ -18,7 +18,7 @@ module.exports = {
         "react/no-set-state": "off",
 
         "react/react-in-jsx-scope": "off",
-        "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
+        "react/jsx-filename-extension": [1, { extensions: [".js", ".jsx"] }],
 
         // warning missing trailing comma
         // "comma-dangle": ["warn", "always"],
@@ -31,7 +31,7 @@ module.exports = {
         "no-cond-assign": ["error", "always"],
 
         // refactor maximum line length
-        "max-len": ["error", { code: 120, ignoreUrls: true }],
+        "max-len": ["warn", { code: 120, ignoreUrls: true }],
 
         // empty line around comment
         "lines-around-comment": [
@@ -56,14 +56,15 @@ module.exports = {
         "no-console": "off",
         "no-inline-comments": "off",
     },
-    overrides: [{
-        files: ["bin/*.js", "lib/*.js"],
-        excludedFiles: "*.test.js",
-        rules: {
-            quotes: ["warn", "single"],
-            "max-len": ["error", { code: 80, ignoreUrls: true }],
+    overrides: [
+        {
+            files: ["bin/*.js", "lib/*.js"],
+            excludedFiles: "*.test.js",
+            rules: {
+                quotes: ["warn", "single"],
+            },
         },
-    }, ],
+    ],
 
     //limit loking parant folder
     root: true,
