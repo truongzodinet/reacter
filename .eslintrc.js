@@ -31,7 +31,7 @@ module.exports = {
         "no-cond-assign": ["error", "always"],
 
         // refactor maximum line length
-        "max-len": ["error", { code: 80, ignoreUrls: true }],
+        "max-len": ["error", { code: 120, ignoreUrls: true }],
 
         // empty line around comment
         "lines-around-comment": [
@@ -61,6 +61,7 @@ module.exports = {
         excludedFiles: "*.test.js",
         rules: {
             quotes: ["warn", "single"],
+            "max-len": ["error", { code: 80, ignoreUrls: true }],
         },
     }, ],
 

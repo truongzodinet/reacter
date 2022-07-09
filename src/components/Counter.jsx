@@ -8,10 +8,10 @@ const Counter = () => {
     const increaseCounter = useCounter((state) => state.increaseCounter)
 
     return (
-        <section>
-            <button onClick={decreaseCounter}>Down</button>
+        <section className="flex justify-center items-center gap-12 font-semibold">
+            <button className="w-12 h-12 rounded-full shadow-md bg-green-100" onClick={decreaseCounter}>-</button>
             <p>{counter}</p>
-            <button onClick={increaseCounter}>Up</button>
+            <button className="w-12 h-12 rounded-full shadow-md bg-green-100"  onClick={increaseCounter}>+</button>
         </section>
     )
 }

@@ -4,7 +4,7 @@
 </div>
 
 ## Feature
-* [UnoCSS](https://github.com/unocss/unocss)
+* [Tailwind x React](https://tailwindcss.com/docs/guides/create-react-app)
 * [React Router](https://reactrouter.com/docs/en/v6/getting-started/installation)
 
 ## Prettier
