@@ -17,6 +17,10 @@ export default defineConfig({
     plugins: [
         react(),
         VitePWA({
+            registerType: "autoUpdate",
+            workbox: {
+                cleanupOutdatedCaches: true,
+            },
             includeAssets: ["favicon.svg", "favicon.ico", "robots.txt", "apple-touch-icon.png"],
             manifest: {
                 name: "Reacter",
@@ -40,7 +44,6 @@ export default defineConfig({
                         purpose: "any maskable",
                     }
                 ],
-                registerType: "autoUpdate"
             }
         })
     ],
