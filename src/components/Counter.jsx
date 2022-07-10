@@ -16,11 +16,8 @@ const Counter = () => {
             >
                 -
             </button>
-            <p>Your love: {counter}</p>
-            <button
-                className="w-10 h-10 rounded-full shadow-md bg-green-50"
-                onClick={increaseCounter}
-            >
+            <p>Express your love: {counter}</p>
+            <button className="w-10 h-10 rounded-full shadow-md bg-green-50" onClick={increaseCounter}>
                 +
             </button>
         </section>

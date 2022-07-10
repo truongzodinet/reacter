@@ -3,3 +3,4 @@ build
 coverage
 README.md
 node_modules/*
+*.config.js

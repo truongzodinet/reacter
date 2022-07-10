@@ -99,6 +99,8 @@ max_line_length = 80
 
 ## Husky + Lint-staged
 
+[Link](https://github.com/typicode/husky/issues/949#issuecomment-823807906)
+
 ```bash
 npm install --save-dev husky lint-staged
 npx husky install
@@ -115,6 +117,9 @@ npx husky add .husky/pre-commit "npx lint-staged"
         "post-applypatch": "echo \"[Husky] post-applypatch\"",
         "pre-commit": "prettier --write . && git add -A ."
     }
+}
+"script":{
+    "pre-commit": "lint-staged",
 }
 ```
 
