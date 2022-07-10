@@ -127,3 +127,5 @@ npx husky add .husky/pre-commit "npx lint-staged"
 ## Store with Zustand
 [Link](https://github.com/pmndrs/zustand)
 
+## PWA with Vite
+[Link](https://vite-plugin-pwa.netlify.app/guide/#installation)
